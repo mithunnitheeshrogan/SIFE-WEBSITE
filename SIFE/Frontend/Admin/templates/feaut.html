@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feaut Product Submission</title>
+  <link rel="stylesheet" href="./css/feaut.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <a href="../templates/index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+  <h1>Submit a Feaut Product</h1>
+
+  <!-- Make sure to add enctype="multipart/form-data" for file uploads -->
+  <form action="http://127.0.0.1:5000/submit_feaut" method="POST" enctype="multipart/form-data">
+    
+    <div class="form-group">
+      <label for="product_name">Product Name *</label>
+      <input type="text" id="product_name" name="product_name" required>
+    </div>
+
+    <h3>Features</h3>
+    <div class="form-group">
+      <input type="text" name="feaut_feature1" placeholder="Feature 1">
+      <input type="text" name="feaut_feature2" placeholder="Feature 2">
+      <input type="text" name="feaut_feature3" placeholder="Feature 3">
+    </div>
+
+    <h3>Specifications</h3>
+    <div class="form-group">
+      <input type="text" name="feaut_spec1" placeholder="Specification 1">
+      <input type="text" name="feaut_spec2" placeholder="Specification 2">
+      <input type="text" name="feaut_spec3" placeholder="Specification 3">
+    </div>
+
+    <h3>Use Cases</h3>
+    <div class="form-group">
+      <input type="text" name="feaut_use1" placeholder="Use Case 1">
+      <input type="text" name="feaut_use2" placeholder="Use Case 2">
+      <input type="text" name="feaut_use3" placeholder="Use Case 3">
+    </div>
+
+    <!-- Image Upload -->
+    <div class="form-group">
+      <label for="image">Upload Product Image</label>
+      <input type="file" id="image" name="image">
+    </div>
+
+    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Submit</button>
+  </form>
+
+  <footer>
+    © 2025 Company Database | All rights reserved.
+  </footer>
+
+</body>
+</html>

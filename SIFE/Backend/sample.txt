@@ -1,0 +1,20 @@
+@app.route('/api/testimonials/id/<int:id>', methods=['GET'])
+def get_testimonials_id(id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM testimonials WHERE id = %s", (id,))
+    row = cursor.fetchone()
+    if row is None:
+        cursor.close()
+        conn.close()
+        return jsonify({"error": "Testimonial not found"}), 404
+
+    column_names = [desc[0] for desc in cursor.description]
+    testimonial = dict(zip(column_names, row))
+    if testimonial["image_path"]:
+        testimonial["image_path"] = url_for('static', filename=testimonial["image_path"].replace('static/', ''))
+        testimonial["image_path"] = request.host_url.rstrip('/') + testimonial["image_path"]
+
+    cursor.close()
+    conn.close()
+    return jsonify(testimonial)

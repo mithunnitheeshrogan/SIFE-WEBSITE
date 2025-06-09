@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sife Engineering</title>
+        <link rel="icon" type="image/x-icon" href="../../IMAGES/Main/logo.png">
+
+        <!--Cdn-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"  />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+        <!----->
+
+
+        <!--Css-->
+        <link rel="stylesheet" href="../../CSS/Home/Homestyle.css">
+        <!---->
+    </head>
+    <body>
+        <section class="progressbar">
+            <div id="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <span id="progress-value">&#x2191;</span>
+            </div>
+        </section>
+    
+        <header class="header">
+            <div class="green_box" id="green-box">
+                <!-- Content for Green Box -->
+            </div>
+        
+            <!-- Navigation Bar -->
+            <nav class="nav nav_container">
+                <!-- Logo Section -->
+                <div class="nav_logo">
+                    <a href="../HTML/Home.html"><img src="../../IMAGES/Main/SiFeLogo.png" alt="SiFe Logo" loading="lazy"></a>            
+                </div>
+        
+                <!-- Navigation Menu -->
+                <div class="nav_menu" id="nav-menu" aria-expanded="false">
+                    <ul class="nav_list">
+                        <!-- Section 1 -->
+                        <li class="nav_item nav_dropdown">
+                            <a href="#" class="nav_link">
+                                <span>Innovations</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="nav_submenu">
+                                <li><a href="../FEAUT/Feaut.html" target="_blank">FEAUT</a></li>
+                                <li><a href="../G Alert/G-Alert.html" target="_blank">G-Alert</a></li>
+                                <li><a href="../Technology/Technology.html" target="_blank">Functional Examples</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- Section 2 -->
+                        <li class="nav_item nav_dropdown">
+                            <a href="#" class="nav_link">
+                                <span>Services</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="nav_submenu">
+                                <li><a href="../Service/service.html">Building Management System</a></li>
+                                <li><a href="../Service/service.html">Product Customization</a></li>
+                                <li><a href="../Service/service.html">Industrial Automation</a></li>
+                                <li><a href="../Service/service.html">Product Testing</a></li>
+                                <li><a href="../Service/service.html">OEM and System Integration</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- Section 3 -->
+                        <li class="nav_item nav_dropdown">
+                            <a href="#" class="nav_link">
+                                <span>Ecosystem</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="nav_submenu">
+                                <li><a href="../Ecosystem/Ecosystem.html">Approach</a></li>
+                                <li><a href="../Ecosystem/Ecosystem.html">Thriving Ecosystem</a></li>
+                                <li><a href="../Ecosystem/Ecosystem.html">WorkFlow</a></li>
+                                <li><a href="../Ecosystem/Ecosystem.html">Procurement</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- Section 4 -->
+                        <li class="nav_item nav_dropdown">
+                            <a href="#" class="nav_link">
+                                <span>Company</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="nav_submenu">
+                                <li><a href="../Company/Company.html" target="_blank">About us</a></li>
+                                <li><a href="../Company/Company.html" target="_blank">Vision</a></li>
+                                <li><a href="../Company/Company.html" target="_blank">Mission</a></li>
+                                <li><a href="../Company/Company.html" target="_blank">Our Values</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <!-- Close Button -->
+                    <div class="nav_close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+        
+                <!-- Right Side Icons -->
+                <div class="nav_rth_container">
+                    <a href="#" class="nav_rth nav_search" aria-label="search">
+                       <!-- <i class="ri-search-line"></i>-->
+                    </a>
+                    <a href="../Contact/Contact.html" class="nav_rth nav_contact">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                    <a href="#" class="nav_rth nav_login">
+                        <i class="ri-user-line"></i>
+                    </a>
+                </div>
+        
+                <!-- Toggle Menu for Mobile -->
+                <div class="nav_toggle" id="nav-toggle" >
+                    <i class="ri-menu-line"></i> 
+                </div>
+            </nav>
+        </header>
+        
+
+        <section class="image-slider" role="region" aria-label="Image Slider">
+            <div class="slider">
+                <!-- List Items -->
+                <div class="image-list">
+                    <div class="image-item active">
+                        <img src="../../IMAGES/Home/1 image.png" alt="Slider Image 1" loading="lazy">
+                        <div class="slider-content">
+                            <p>Innovation 1</p>
+                            <h2>Manage Faster,Smarter & Safer.</h2>
+                    
+                        </div>
+                    </div>
+        
+                    <div class="image-item">
+                        <img src="../../IMAGES/Home/fire.jpeg" alt="Slider Image 2" loading="lazy">
+                        <div class="slider-content">
+                            <p>Innovation 2</p>
+                            <h2>Slider 02</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dignissimos!</p>
+                        </div>
+                    </div>
+        
+                    <div class="image-item">
+                        <img src="../../IMAGES/Home/Global.jpg" alt="Slider Image 3" loading="lazy">
+                        <div class="slider-content">
+                            <p>Innovation 3</p>
+                            <h2>Slider 03</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dignissimos!</p>
+                        </div>
+                    </div>
+        
+                    <div class="image-item">
+                        <img src="../../IMAGES/Home/workers-control-room.jpg" alt="Slider Image 4" loading="lazy">
+                        <div class="slider-content">
+                            <p>Innovation 4</p>
+                            <h2>Slider 04</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dignissimos!</p>
+                        </div>
+                    </div>
+        
+                    <div class="image-item">
+                        <img src="../../IMAGES/Home/Engineer Monitoring.jpg" alt="Slider Image 5" loading="lazy">
+                        <div class="slider-content">
+                            <p>Innovation 5</p>
+                            <h2>Slider 05</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dignissimos!</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navigation Buttons -->
+                <div class="slider-arrows">
+                    <button class="slider-button" id="prev" aria-label="Previous Slide">
+                        <span>&#10094;</span> <!-- Unicode for left arrow -->
+                    </button>
+                    <button class="slider-button" id="next" aria-label="Next Slide">
+                        <span>&#10095;</span> <!-- Unicode for right arrow -->
+                    </button>
+                </div>
+        
+                <!-- Thumbnails -->
+                <div class="slider-thumbnail">
+                    <div class="slider-thumbnail-item active">
+                        <img src="../../IMAGES/Home/1 image.png" alt="Thumbnail of Slider 1" loading="lazy">
+                        <div class="slider-thumbnail-content">Slider 01</div>
+                    </div>
+        
+                    <div class="slider-thumbnail-item">
+                        <img src="../../IMAGES/Home/fire.jpeg" alt="Thumbnail of Slider 2" loading="lazy">
+                        <div class="slider-thumbnail-content">Slider 02</div>
+                    </div>
+        
+                    <div class="slider-thumbnail-item">
+                        <img src="../../IMAGES/Home/Global.jpg" alt="Thumbnail of Slider 3" loading="lazy">
+                        <div class="slider-thumbnail-content">Slider 03</div>
+                    </div>
+        
+                    <div class="slider-thumbnail-item">
+                        <img src="../../IMAGES/Home/workers-control-room.jpg" alt="Thumbnail of Slider 4" loading="lazy">
+                        <div class="slider-thumbnail-content">Slider 04</div>
+                    </div>
+        
+                    <div class="slider-thumbnail-item">
+                        <img src="../../IMAGES/Home/Engineer Monitoring.jpg" alt="Thumbnail of Slider 5" loading="lazy">
+                        <div class="slider-thumbnail-content">Slider 05</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="welcome-section">
+            <h1 class="welcome-title">Welcome to SiFe Engineering</h1>
+            <p class="welcome-subtitle">Discover our Works</p>
+        </section>
+
+        <section class="company-text-content">
+            <div class="company-text-container">
+                <div class="company-details">
+                    <h2> SiFe Engineering</h2>
+                    <p>SiFe Engineering is a privately-owned high-tech SME specialized in the field of<strong> remote monitoring systems</strong>.
+                        Founded in 2009, its main market niches are in the field of energy efficiency, environmental monitoring, and
+                        industrial processes automation.
+                    </p>
+                </div>
+                <figure class="company-text-image">
+                    <img src="../../IMAGES/Home/Alert-monitoring-control.png" alt="Modern engineering company skyline with skyscrapers" loading="lazy">
+                    <figcaption>Manage Instantly,Smartly & Safely</figcaption>
+                </figure>
+            </div>
+        </section>
+
+                <!-- Services Section -->
+        <section class="service" id="service">
+            <h2 class="heading">Our <span>Services</span></h2>
+
+            <div class="service-container">
+                <div class="service-box">
+                    <img src="../../IMAGES/Home/Monitor.png" alt="Web Development Service" loading="lazy">
+                    <h3>Monitoring Solutions</h3>
+                    <p>We provide monitoring solutions for a variety of industrial utilities and equipment. This results in increased efficiency, waste reduction, reliable information, and real-time notifications.</p>
+                   <!--<a href="#" class="service-btn">Read More</a>-->
+                </div>
+
+                <div class="service-box">
+                    <img src="../../IMAGES/Home/communication.png" alt="Graphic Design Service" loading="lazy">
+                    <h3>Communication Module</h3>
+                    <p>We offer sophisticated communication solutions for various industries, helping them address challenges and provide the greatest value to their end customers.</p>
+                    <!--<a href="#" class="service-btn">Read More</a>-->
+                </div>
+
+                <div class="service-box">
+                    <img src="../../IMAGES/Home/Product.jpg" alt="Digital Marketing Service" loading="lazy">
+                    <h3>Product Engineering</h3>
+                    <p>We assist clients in developing and manifesting their ideas to achieve their vision. Whether it involves product design or system automation, we guarantee a consistent level of results in every aspect.</p>
+                    <!--<a href="#" class="service-btn">Read More</a>-->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="company-service-text-content">
+            <div class="company-service-text-container">
+                <div class="company-service-details">
+                    <h2>Alert Solutions</h2>
+                    <p> Reduce maintenance trips, improve customer service and get full control of your industrial machinery and devices at anytime from anyplace! Save time, save energy and save money</p>
+                </div>
+                <figure class="company-service-text-image">
+                    <img src="../../IMAGES/Home/Alert.jpg" alt="Monitoring SOlutions Image" loading="lazy">
+                    <!--<figcaption>Modern engineering company skyline</figcaption>-->
+                </figure>
+            </div>
+        </section>
+    
+        <section class="company-service-text-content">
+            <div class="company-service-text-container reverse">
+                <div class="company-service-details">
+                    <h2>Control Module</h2>
+                    <p>Control module manages and regulates system operations, ensuring efficiency, reliability, and seamless integration with various components.</p>
+                </div>
+                <figure class="company-service-text-image">
+                    <img src="../../IMAGES/Home/Control.jpg" alt="Communication Module Image" loading="lazy">
+                    <!--<figcaption></figcaption>-->
+                </figure>
+            </div>
+        </section>
+    
+        <section class="company-service-text-content">
+            <div class="company-service-text-container">
+                <div class="company-service-details">
+                    <h2>Monitoring Solutions</h2>
+                    <p>Monitoring solutions provide real-time data analysis, enhance system performance, ensure security, and enable proactive maintenance for optimal efficiency.</p>
+                </div>
+                <figure class="company-service-text-image">
+                    <img src="../../IMAGES/Home/monitoring.jpg" alt=" Product Engineering Image" loading="lazy">
+                    <!--<figcaption>Modern engineering company skyline</figcaption>-->
+                </figure>
+            </div>
+        </section>
+        
+                <!-- Areas of Expertise -->
+        <section class="area-container">
+            <div class="area-heading">
+                <h1 class="area-section-title">Areas of Expertise</h1>
+                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, optio?</h2>
+            </div>
+
+            <div class="area-grid">
+                <!-- Card 1 -->
+                <div class="area-card card-bms">
+                    <div class="area-card-image">
+                        <img src="../../IMAGES/Home/BMS.jpg" alt="Building Management System" loading="lazy">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>Building Fire Safety System</h3>
+                        <p>We manage building operations with a BMS, automating HVAC, lighting, security, and energy to enhance efficiency, comfort, and sustainability effectively.</p>
+                    </div>
+                        <a href="#product-testing-section" class="read-more-btn">READ MORE</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="area-card card-customization">
+                    <div class="area-card-image">
+                        <img src="../../IMAGES/Home/Custom.png" alt="Product Customization" loading="lazy">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>Product Customization</h3>
+                        <p>Product customization allows us to tailor designs, features, and specifications to meet unique customer needs, enhancing satisfaction and engagement.</p>
+                    </div>
+                    <a href="#" class="read-more-btn">READ MORE</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="area-card card-automation">
+                    <div class="area-card-image">
+                        <img src="../../IMAGES/Home/Industry.jpg" alt="Industrial Automation" loading="lazy">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>Industrial Automation</h3>
+                        <p>We implement industrial automation to optimize processes, reduce manual labor, improve efficiency, and enhance precision using robotics.</p>
+                    </div>
+                    <a href="#" class="read-more-btn">READ MORE</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="area-card card-testing">
+                    <div class="area-card-image">
+                        <img src="../../IMAGES/Home/Product testing.png" alt="Product Testing" loading="lazy">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>Product Testing</h3>
+                        <p>We conduct product testing to ensure quality, reliability, and performance by identifying defects and verifying compliance with industry standards.</p>
+                    </div>
+                    <a href="#" class="read-more-btn">READ MORE</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="area-card card-oem">
+                    <div class="area-card-image">
+                        <img src="../../IMAGES/Home/OEM.jpg" alt="OEM and System Integration" loading="lazy">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>OEM and System Integration</h3>
+                        <p>We work with OEMs to provide specialized components and handle system integration to ensure seamless functionality and optimal performance.</p>
+                    </div>
+                    <a href="#" class="read-more-btn">READ MORE</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="achievements-section">
+            <div class="achivements-heading">
+                <h1>Our Achievements</h1>
+                <p class="achivements-tagline">Dedicated to excellence and innovation.</p>
+            </div>
+        
+            <div class="counter-container">
+                <div class="counter-box">
+                    <h2 class="counter" data-target="16">0</h2>
+                    <p>Years of Operation</p>
+                    <span class="achivements-subtext">Innovative and high-quality projects</span>
+                </div>
+                <div class="counter-box">
+                    <h2 class="counter" data-target="300">0</h2>
+                    <p>Happy Clients</p>
+                    <span class="achivements-subtext">Customer satisfaction is our priority</span>
+                </div>
+                <div class="counter-box">
+                    <h2 class="counter" data-target="160">0</h2>
+                    <p>Products Designed</p>
+                    <span class="achivements-subtext">Recognized for outstanding performance</span>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="industry-card-container">
+            <h2 class="industry-section-title">Industries We Serve</h2>
+            
+            <div class="industry-card-wrapper">
+                <div class="industry-card">
+                    <img src="../../IMAGES/Home/Automotive.jpg" alt="Card Image" loading="lazy">
+                    <h3>Automotive</h3>
+                    <p>We provide advanced fire alert systems for automotive industries, ensuring early detection and enhanced vehicle safety.</p>
+                </div>
+                <div class="industry-card">
+                    <img src="../../IMAGES/Home/Process.jpg" alt="Card Image" loading="lazy">
+                    <h3>Process</h3>
+                    <p>We provide reliable fire alert systems for process industries, ensuring early detection and protecting critical operations.</p>
+                </div>
+                <div class="industry-card">
+                    <img src="../../IMAGES/Home/Commercial.jpg" alt="Card Image" loading="lazy">
+                    <h3>Commercial</h3>
+                    <p>We offer advanced fire alert systems for commercial industries, ensuring safety, quick response, and minimal disruption.</p>
+                </div>
+                <div class="industry-card">
+                    <img src="../../IMAGES/Home/firesafety.jpg" alt="Card Image" loading="lazy">
+                    <h3>Fire Safety</h3>
+                    <p>We provide comprehensive fire safety solutions, ensuring early detection, rapid response, and protection of life and property.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="testimonial-container">
+              <div class="testimonial-section-title">
+                <h2 id="testimonials-heading">Testimonials</h2>
+                <span class="testimonial-section-separator"></span>
+                <p>See what our customers have to say about us!</p>
+              </div>
+            </div>
+          
+            <!-- Carousel Wrapper -->
+            <div class="testimonials-carousel-wrap">
+              <!-- Swiper container -->
+              <div class="swiper testimonials-carousel" role="region" aria-label="Customer Testimonials Carousel">
+                <!-- Slides will be injected via JS -->
+                <div class="swiper-wrapper" id="testimonial-wrapper">
+                  <!-- JavaScript will dynamically populate testimonials here -->
+                </div>
+          
+                <!-- Fallback for users with JavaScript disabled -->
+                <noscript>
+                  <div class="swiper-slide">
+                    <div class="testi-item">
+                      <p>Please enable JavaScript to view testimonials.</p>
+                    </div>
+                  </div>
+                </noscript>
+          
+                <!-- Pagination -->
+                <div class="tc-pagination" aria-label="Carousel Pagination"></div>
+              </div>
+          
+              <!-- Navigation Buttons -->
+              <nav class="testimonials-navigation" aria-label="Testimonial Carousel Navigation">
+                <div class="listing-carousel-button listing-carousel-button-prev" tabindex="0" role="button" aria-label="Previous Testimonial">
+                  <i class="ri-arrow-left-line"></i>
+                </div>
+                <div class="listing-carousel-button listing-carousel-button-next" tabindex="0" role="button" aria-label="Next Testimonial">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </nav>
+            </div>
+        </section>
+          
+
+        <section class="contactus">
+            <div class="contact-title">
+                <h3>Request a Consultation</h3>
+                <p>We are here to assist you. Send us a message or contact us through the details below.</p>
+            </div>
+        
+            <div class="contact-box">
+                <!-- Contact Form -->
+                <div class="contact contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="contact-formbox">
+                            <div class="contact-row">
+                                <div class="inputbox">
+                                    <span>First Name</span>
+                                    <input type="text" required>
+                                </div>
+                                <div class="inputbox">
+                                    <span>Last Name</span>
+                                    <input type="text"  required>
+                                </div>
+                            </div>
+        
+                            <div class="contact-row">
+                                <div class="inputbox">
+                                    <span>Email</span>
+                                    <input type="email"  required>
+                                </div>
+                                <div class="inputbox">
+                                    <span>Phone Number</span>
+                                    <input type="text"  required>
+                                </div>
+                            </div>
+        
+                            <div class="contact-row">
+                                <div class="inputbox">
+                                    <span>State</span>
+                                    <input type="text" >
+                                </div>
+                                <div class="inputbox">
+                                    <span>Country</span>
+                                    <input type="text" >
+                                </div>
+                            </div>
+        
+                            <div class="inputbox">
+                                <span>Organization Name</span>
+                                <input type="text" placeholder=>
+                            </div>
+        
+                            <div class="inputbox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message here..." required></textarea>
+                            </div>
+        
+                            <div class="inputbox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <div class="infobox">
+                        <!-- Location -->
+                        <div class="info-item location">
+                            <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+                            <p>Old No. 6/2, New No. 15, Flowers Road Arumbakkam,<br> Chennai 600106,India</p>
+                        </div>
+        
+                        <!-- Emails -->
+                        <div class="info-item email">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <div class="email-list">
+                                <p><a href="mailto:support@mail.in">info@sife.in</a></p>
+                                <p><a href="mailto:help@mail.in">sales@sife.in</a></p>
+                            </div>
+                        </div>
+        
+                        <!-- Phone Numbers -->
+                        <div class="info-item phone">
+                            <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                            <div class="phone-list">
+                                <p><a href="tel:+912342342323">+91 2342342323</a></p>
+                                <p><a href="tel:+918765432100">+91 8765432100</a></p>
+                            </div>
+                        </div>
+        
+                        <!-- Social Media Links -->
+                        <div class="social-container">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Google Map -->
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3944529758096!2d80.20609547489488!3d13.07416898725068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a1f5824d1d%3A0x4ac1df5fe7e65c60!2sSiFe%20Engineering!5e0!3m2!1sen!2sin!4v1743231627994!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="client">
+            <h1>Our Partners</h1>
+            <div class="client-slider">
+                <ul class="brands">
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/AAI LOGO.png" alt="Airbnb Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/KALPEX LOGO.png " alt="Dropbox Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/KANEX LOGO.png" alt="IBM Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/SAFEX LOGO.png  " alt="Microsoft Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/EXIDE Logo.png  " alt="Amazon Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/SIEMENS GAMESA LOGO.png " alt="Instagram Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/DRDO Logo.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/CEASE FIRE LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/CHLORIDE LOGO.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/Airtel logo.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/IPSB LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/MURUGAPPA LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/REIL.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/Bosch Logo.png " alt="Atom Logo" loading="lazy"></li>
+
+                    <!-- Duplicate for smooth animation -->
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/KANEX LOGO.png" alt="IBM Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/SAFEX LOGO.png  " alt="Microsoft Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/EXIDE Logo.png  " alt="Amazon Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/SIEMENS GAMESA LOGO.png " alt="Instagram Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/DRDO Logo.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/CEASE FIRE LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/CHLORIDE LOGO.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/Airtel logo.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/IPSB LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/MURUGAPPA LOGO.png " alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/REIL.png" alt="Atom Logo" loading="lazy"></li>
+                    <li class="brand-logo"><img src="../../IMAGES/Partners/Bosch Logo.png " alt="Atom Logo" loading="lazy"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>Why SiFe .?</h3>
+                <p> Our highly technical enabled background and multidisciplinary professionals offer qualitative solutions for a quantitative 
+                    production environment. Enabling a more sustainable and efficient future automation.</p>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>What is SiFe's Approach .?</h3>
+                <p>We develop a plan, come to an agreement, and put it into action.</p>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <h3>What are SiFe's Areas of Expertise.?
+
+                </h3>
+                <p>Industrial Automation,Remote Monitoring,Building Management System,OEM and System Intergration</p>
+            </div>
+        </section>
+
+        <script>
+            function toggleFAQ(element) {
+                element.classList.toggle("active");
+            }
+        </script>
+
+
+        <!-- Tagline Section -->
+        <section class="tagline-section">
+            <!-- Left Side: Company & Tagline -->
+            <div class="tagline-left">
+                <img src="../../IMAGES/Main/SiFeLogo.png" alt="Company Logo" class="company-logo" loading="lazy">
+                <div class="separator"></div>
+                <p class="tagline">Manage Instantly. Smartly. Safely.</p>
+            </div>
+
+            <!-- Right Side: Buttons -->
+            <div class="tagline-right">
+                <button class="btn contact-btn">Contact Us</button>
+                <button class="btn explore-btn">Explore More</button>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <!-- About Us -->
+                <div class="footer-about-us">
+                    <h2>About Us</h2>
+                    <p>SiFe Engineering is a privately-owned high-tech SME specialized in the field of remote monitoring systems.
+                        Founded in 2009, its main market niches are in the field of energy efficiency, environmental monitoring, and    industrial processes automation. </p>
+                    <ul class="footer-social">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+        
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h2>Innovations</h2>
+                    <ul>
+                        <li><a href="./Feaut.html" target="_blank">FEAUT</a></li>
+                        <li><a href="./G-Alert.html" target="_blank">G-ALERT</a></li>
+                        <li><a href="./Technology.html" target="_blank">Functional Examples</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="./service.html">Building Fire Safety System</a></li>
+                        <li><a href="./service.html">Product Customization</a></li>
+                        <li><a href="./service.html">Industrial Automation</a></li>
+                        <li><a href="./service.html">Product Testing</a></li>
+                        <li><a href="./service.html">OEM and System Intergration</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Ecosystem</h2>
+                    <ul>
+                        <li><a href="./Ecosystem.html">Workflow</a></li>
+                        <li><a href="./Ecosystem.html">Approach</a></li>
+                        <li><a href="./Ecosystem.html">Areas of Expertise</a></li>
+                        <li><a href="./Ecosystem.html">Our Global Presence</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="./Company.html">About us</a></li>
+                        <li><a href="./Company.html">Our Vision</a></li>
+                        <li><a href="./Company.html">Our Mission</a></li>
+                        <li><a href="./Company.html">Our Values</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Separator Line -->
+            <hr class="contact-line">
+        
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <address class="contact-details">
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Old No. 6/2, New No. 15, Flowers Road Arumbakkam,<br> Chennai 600106,India</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>
+                            <a href="tel:+123434252">+91 44 42660114</a><br>
+                            <a href="tel:+198765432">+ 91 9003042821</a> 
+                        </p>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>
+                            <a href="mailto:support@mail.com">info@sife.in</a> <br>
+                            <a href="mailto:sales@mail.com">sales@sife.in</a>
+                        </p>
+                    </div>
+                </address>
+            </div>
+        </footer>
+        
+        <!-- Separate Footer Bottom Section -->
+        <section class="footer-bottom">
+            <div class="footer-bottom-details">
+                <div class="footer-bottom-text">
+                    <span class="copyright-text">
+                        Copyright © <a href="#">SiFe Engineering</a>. All Rights Reserved.
+                    </span>
+                    <span class="policy-terms">
+                        <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms & Conditions</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Add FontAwesome for icons (if not already included) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+
+        
+         <!-- Include Ionicons -->
+         <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+         <!-- Include Font Awesome -->
+         <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" ></script>
+
+
+        <script src="../../JAVASCRIPT/Home/Scrollprogress.js"></script>
+        <script src="../../JAVASCRIPT/Home/Navigation-screen-response.js"></script>
+        
+        <script src="../../JAVASCRIPT/Home/Image-sliderscript.js"></script>
+        <script src="../../JAVASCRIPT/Home/Welcome-section-fade-in-effect.js"></script>
+        <script src="../../JAVASCRIPT/Home/service-effect.js"></script>
+        <script src="../../JAVASCRIPT/Home/scroll-progress-bar.js"></script>
+        <script src="../../JAVASCRIPT/Home/Testimonials.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+        <script src="../../JAVASCRIPT/Home/Client.js"></script>
+        <script src="../../JAVASCRIPT/Home/Tagline.js"></script>
+        <script src="../../JAVASCRIPT/Home/Dropdownarrow.js"></script>
+        <script src="../../JAVASCRIPT/Home/achivements.js"></script>
+    </body>
+</html>

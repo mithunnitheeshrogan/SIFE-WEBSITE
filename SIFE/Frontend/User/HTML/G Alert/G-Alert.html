@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Alert</title>
+    <link rel="stylesheet" href="../../CSS/Innovations/G-ALERT/G-alert.css">
+    <link rel="icon" type="image/x-icon" href="../../IMAGES/Main/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+</head>
+<body>
+    <section class="progressbar">
+        <div id="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <span id="progress-value">&#x2191;</span>
+        </div>
+    </section>
+
+    <header class="header">
+        <div class="green_box" id="green-box">
+            <!-- Content for Green Box -->
+        </div>
+    
+        <!-- Navigation Bar -->
+        <nav class="nav nav_container">
+            <!-- Logo Section -->
+            <div class="nav_logo">
+                <a href="../HOME/Home.html"><img src="../../IMAGES/Main/SiFeLogo_HD.png" alt="SiFe Logo" loading="lazy"></a>            
+            </div>
+    
+            <!-- Navigation Menu -->
+            <div class="nav_menu" id="nav-menu" aria-expanded="false">
+                <ul class="nav_list">
+                    <!-- Section 1 -->
+                    <li class="nav_item nav_dropdown">
+                        <a href="#" class="nav_link">
+                            <span>Innovations</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="nav_submenu">
+                            <li><a href="../FEAUT/Feaut.html" target="_blank">FEAUT</a></li>
+                            <li><a href="../G Alert/G-Alert.html" target="_blank">G-Alert</a></li>
+                            <li><a href="../Technology/Technology.html" target="_blank">Functional Examples</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Section 2 -->
+                    <li class="nav_item nav_dropdown">
+                        <a href="#" class="nav_link">
+                            <span>Services</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="nav_submenu">
+                            <li><a href="../Service/service.html">Building Management System</a></li>
+                            <li><a href="../Service/service.html">Product Customization</a></li>
+                            <li><a href="../Service/service.html">Industrial Automation</a></li>
+                            <li><a href="../Service/service.html">Product Testing</a></li>
+                            <li><a href="../Service/service.html">OEM and System Integration</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Section 3 -->
+                    <li class="nav_item nav_dropdown">
+                        <a href="#" class="nav_link">
+                            <span>Ecosystem</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="nav_submenu">
+                            <li><a href="../Ecosystem/Ecosystem.html">Approach</a></li>
+                            <li><a href="../Ecosystem/Ecosystem.html">Thriving Ecosystem</a></li>
+                            <li><a href="../Ecosystem/Ecosystem.html">WorkFlow</a></li>
+                            <li><a href="../Ecosystem/Ecosystem.html">Procurement</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Section 4 -->
+                    <li class="nav_item nav_dropdown">
+                        <a href="#" class="nav_link">
+                            <span>Company</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="nav_submenu">
+                            <li><a href="../Company/Company.html" target="_blank">About us</a></li>
+                            <li><a href="../Company/Company.html" target="_blank">Vision</a></li>
+                            <li><a href="../Company/Company.html" target="_blank">Mission</a></li>
+                            <li><a href="../Company/Company.html" target="_blank">Our Values</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- Close Button -->
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+    
+            <!-- Right Side Icons -->
+            <div class="nav_rth_container">
+                <a href="#" class="nav_rth nav_search" aria-label="search">
+                    <!--<i class="ri-search-line"></i>-->
+                </a>
+                <a href="../Contact/Contact.html" class="nav_rth nav_contact">
+                    <i class="ri-mail-line"></i>
+                </a>
+                <a href="#" class="nav_rth nav_login">
+                    <i class="ri-user-line"></i>
+                </a>
+            </div>
+    
+            <!-- Toggle Menu for Mobile -->
+            <div class="nav_toggle" id="nav-toggle" >
+                <i class="ri-menu-line"></i> 
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="container">
+            <!-- Left Side Content -->
+            <div class="hero-content">
+                <h1 class="animated-text">Experience the Future of Innovation</h1>
+                <p class="animated-text">
+                    The ultimate smart innovation designed to enhance your daily life with cutting-edge technology.
+                </p>
+    
+                <!-- Key Features -->
+                <div class="hero-features">
+                    <div class="feature animated-text">
+                        <i class="fas fa-bolt"></i>
+                        <span>Ultra-Fast Performance</span>
+                    </div>
+                    <div class="feature animated-text">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Advanced Security</span>
+                    </div>
+                    <div class="feature animated-text">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Communication Module</span>
+                    </div>
+                </div>
+    
+                <!-- Call to Action Button -->
+                <div class="hero-buttons">
+                    <a href="#" class="cta-btn primary bounce">Learn More</a>
+                </div>
+            </div>
+    
+            <!-- Right Side Product Image -->
+            <div class="hero-image">
+                <img src="../../IMAGES/Home/Alert-monitoring-control.png" alt="Futuristic Smart Gadget" class="floating-image">
+                <div class="glow"></div> <!-- Subtle glowing effect -->
+            </div>
+        </div>
+    </section>
+    <section class="welcome-section">
+        <h1 class="welcome-title">Welcome to SiFe Engineering</h1>
+        <p class="welcome-subtitle">Discover our Works</p>
+    </section>
+
+    <section class="company-text-content">
+        <div class="company-text-container">
+            <div class="company-details">
+                <h2>G-ALERT <br><span>Future of Alert Solutions</span></h2>
+                <p> 
+                    G-ALert provides new dimension in alarm solution and a simple yet effective solution to all your process and Safety needs.<br><br> 
+                    Once triggered the G-Alert automatically makes call & sends a text message to phone numbers stored in it, providing a <strong>fast and reliable warning</strong>, ensuring total
+                    peace of mind.
+                </p>
+            </div>
+            <figure class="company-text-image">
+                <img src="../../IMAGES/Home/G-alert-description.png" 
+                     alt="Modern engineering company skyline with skyscrapers" 
+                     loading="lazy">
+                <figcaption>Manage Instantly, Smartly & Safely</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-header">
+            <h5>Features</h5>
+            <h2>Future-enabled automation empowers smarter operations through intelligent systems, enhancing efficiency, precision, and real-time decision-making.</h2>
+        </div>
+    
+        <div class="features-content">
+            <!-- Left Features -->
+            <div class="feature-left">
+                <div class="inner-box">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h4>Advanced Technology</h4>
+                    <p>Experience the latest in cutting-edge technology with our product.</p>
+                </div>
+    
+                <div class="inner-box">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>High Performance</h4>
+                    <p>Enjoy ultra-fast and reliable performance.</p>
+                </div>
+    
+                <div class="inner-box">
+                    <i class="fa-solid fa-shield-alt"></i>
+                    <h4>Enhanced Security</h4>
+                    <p>Stay secure with built-in advanced security features.</p>
+                </div>
+            </div>
+    
+            <!-- Middle Image -->
+            <div class="feature-image">
+                <img src="../../IMAGES/Home/Alert-monitoring-control.png" alt="Product Display">
+            </div>
+    
+            <!-- Right Features -->
+            <div class="feature-right">
+                <div class="inner-box">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <h4>Long Battery Life</h4>
+                    <p>Work uninterrupted with long-lasting battery efficiency.</p>
+                </div>
+    
+                <div class="inner-box">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h4>Wireless Connectivity</h4>
+                    <p>Seamlessly connect with fast WiFi and Bluetooth.</p>
+                </div>
+    
+                <div class="inner-box">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h4>Cloud Integration</h4>
+                    <p>Sync and store data easily with cloud connectivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="f-use-card" aria-labelledby="tech-title">
+        <div class="f-use-title">
+            <h2 id="tech-title" style="color: #10238a;">Explore Our Technologies</h2>
+            <p style="color: #666;">Discover the cutting-edge innovations that drive our world forward.</p>
+        </div>
+      
+        <div class="f-card-container">
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-solid fa-arrow-up-from-water-pump"></i></span>
+                <div class="f-cardtitle">Solar Pump Monitoring</div>
+                <div class="f-carddetail">Reliable solar pump monitoring system for advanced fire safety solutions.</div>
+                <button class="f-cardbutton" aria-label="Read more about Satellite Communication">Read More</button>
+            </div>
+    
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-solid fa-house-flood-water"></i></span>
+                <div class="f-cardtitle">Water Treatment Plant</div>
+                <div class="f-carddetail">Smart automation for future-ready, efficient water treatment plant operations.</div>
+                <button class="f-cardbutton" aria-label="Read more about Innovation">Read More</button>
+            </div>
+    
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-solid fa-solar-panel"></i></span>
+                <div class="f-cardtitle">Solar Plant Monitoring</div>
+                <div class="f-carddetail">Real-time solar plant monitoring for efficient, future-ready energy management.</div>
+                <button class="f-cardbutton" aria-label="Read more about Artificial Intelligence">Read More</button>
+            </div>
+    
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-brands fa-watchman-monitoring"></i></span>
+                <div class="f-cardtitle">Windmill Monitoring</div>
+                <div class="f-carddetail">Smart windmill monitoring ensures efficient, reliable, and sustainable power generation.</div>
+                <button class="f-cardbutton" aria-label="Read more about Big Data">Read More</button>
+            </div>
+
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></span>
+                <div class="f-cardtitle">Industrial Alert Solutions</div>
+                <div class="f-carddetail">Instant industrial alert solutions for safety, efficiency, and smart response.</div>
+                <button class="f-cardbutton" aria-label="Read more about Automation">Read More</button>
+            </div>
+
+            <div class="f-card" style="--color: #10238a;">
+                <span class="f-icon" aria-hidden="true"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                <div class="f-cardtitle">Fire Watch Suite</div>
+                <div class="f-carddetail">Comprehensive Fire Watch Suite for real-time monitoring and rapid response.
+                </div>
+                <button class="f-cardbutton" aria-label="Read more about Automation">Read More</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="outcomes">
+        <h2 class="outcomes-header">Our Outcomes</h2>
+        <div class="outcomes-container">
+            <!-- First Row - 3 Cards -->
+            <div class="outcomes-row">
+                <div class="outcome-item outcome-1">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth</h3>
+                    <p>We help businesses scale effectively.</p>
+                </div>
+                <div class="outcome-item outcome-2">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Bringing new ideas to life.</p>
+                </div>
+                <div class="outcome-item outcome-3">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Building stronger connections.</p>
+                </div>
+            </div>
+    
+            <!-- Second Row - 2 Cards Centered -->
+            <div class="outcomes-row">
+                <div class="outcome-item outcome-4">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Efficiency</h3>
+                    <p>Optimizing performance at all levels.</p>
+                </div>
+                <div class="outcome-item outcome-5">
+                    <i class="fas fa-globe"></i>
+                    <h3>Impact</h3>
+                    <p>Creating a meaningful global difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="body-text-container">
+        <div class="body-architecture">
+            <div class="text-architecture">
+                <h2>G-Alert Architecture</h2>
+                <p>In both process industries and the fire sector, the prevention level addresses the protocols, mechanisms, 
+                    and systems that aim to proactively prevent incidents.</p>
+                <p>Prevention levels in alert architecture are structured to detect early warning signs and potential threats. 
+                    They provide preemptive alerts, allowing timely interventions to avoid escalation.</p>
+            </div>
+            <div class="body-architecture-image">
+                <figure>
+                    <img src="../../IMAGES/Home/G-Alert Architecture.png"
+                         alt="Diagram of G-Alert Architecture in process industries and fire prevention" 
+                         loading="lazy">
+                    <figcaption>Overview of G-Alert Architecture</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="product-section">
+        <!-- 🌟 SECTION HEADER -->
+        <div class="product-section-header">
+          <h1 class="product-title">Discover Our Latest G-Alert Products</h1>
+          <p class="product-section-subtitle">Explore the Features, Specifications, and Uses</p>
+        </div>
+      
+        <!-- 📌 MAIN CONTAINER -->
+        <div class="product-container" id="galert-container">
+          <!-- Product cards will be dynamically loaded here -->
+        </div>
+    </section>
+      
+    
+
+    <!-- Tagline Section -->
+    <section class="tagline-section">
+        <!-- Left Side: Company & Tagline -->
+        <div class="tagline-left">
+            <img src="../../IMAGES/Main/SiFeLogo.png" alt="Company Logo" class="company-logo">
+            <div class="separator"></div>
+            <p class="tagline">Manage Instantly. Smartly. Safely.</p>
+        </div>
+
+        <!-- Right Side: Buttons -->
+        <div class="tagline-right">
+            <button class="btn contact-btn">Contact Us</button>
+            <button class="btn explore-btn">Explore More</button>
+        </div>
+    </section>
+    
+    
+    
+    <footer class="footer-section">
+            <div class="footer-container">
+                <!-- About Us -->
+                <div class="footer-about-us">
+                    <h2>About Us</h2>
+                    <p>SiFe Engineering is a privately-owned high-tech SME specialized in the field of remote monitoring systems.
+                        Founded in 2009, its main market niches are in the field of energy efficiency, environmental monitoring, and    industrial processes automation. </p>
+                    <ul class="footer-social">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+        
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h2>Innovations</h2>
+                    <ul>
+                        <li><a href="../FEAUT/Feaut.html">FEAUT</a></li>
+                        <li><a href="../G Alert/G-Alert.html">G-ALERT</a></li>
+                        <li><a href="../Technology/Technology.html">Functional Examples</a></li>
+                       
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="../Service/service.html">Building Fire Safety System</a></li>
+                        <li><a href="../Service/service.html">Product Customization</a></li>
+                        <li><a href="../Service/service.html">Industrial Automation</a></li>
+                        <li><a href="../Service/service.html">Product Testing</a></li>
+                        <li><a href="../Service/service.html">OEM and System Intergration</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Ecosystem</h2>
+                    <ul>
+                        <li><a href="../Ecosystem/Ecosystem.html">Workflow</a></li>
+                        <li><a href="../Ecosystem/Ecosystem.html">Approach</a></li>
+                        <li><a href="../Ecosystem/Ecosystem.html">Thriving Ecosystem</a></li>
+                        <li><a href="../Ecosystem/Ecosystem.html">Procurement</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="../Company/Company.html">About us</a></li>
+                        <li><a href="../Company/Company.html">Our Vision</a></li>
+                        <li><a href="../Company/Company.html">Our Mission</a></li>
+                        <li><a href="../Company/Company.html">Our Values</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Separator Line -->
+            <hr class="contact-line">
+        
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <address class="contact-details">
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Old No. 6/2, New No. 15, Flowers Road Arumbakkam,<br> Chennai 600106,India</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>
+                            <a href="tel:+123434252">+91 44 42660114</a><br>
+                            <a href="tel:+198765432">+ 91 9003042821</a> 
+                        </p>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>
+                            <a href="mailto:support@mail.com">info@sife.in</a> <br>
+                            <a href="mailto:sales@mail.com">sales@sife.in</a>
+                        </p>
+                    </div>
+                </address>
+            </div>
+        </footer>
+        
+        <!-- Separate Footer Bottom Section -->
+        <section class="footer-bottom">
+            <div class="footer-bottom-details">
+                <div class="footer-bottom-text">
+                    <span class="copyright-text">
+                        Copyright © <a href="#">SiFe Engineering</a>. All Rights Reserved.
+                    </span>
+                    <span class="policy-terms">
+                        <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms & Conditions</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+    
+
+        <script src="../../JAVASCRIPT/Home/Welcome-section-fade-in-effect.js"></script>
+        <script src="../../JAVASCRIPT/Home/scroll-progress-bar.js"></script>
+        <script src="../../JAVASCRIPT/Innovations/G-alert/product.js"></script>
+        <script src="../../JAVASCRIPT/Innovations/Feaut/use.js"></script>    
+        <script src="../../JAVASCRIPT/Innovations/Feaut/features.js"></script>
+        <script src="../../JAVASCRIPT/Innovations/Feaut/outcomes-scroll.js"></script>
+        <script src="../../JAVASCRIPT/Home/Tagline.js"></script>
+    
+</body>
+</html>
