@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+      display: flex;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      margin-bottom: 20px;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .testimonial-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0077cc;
+      flex-shrink: 0;
+    }
+
+    .testimonial-details {
+      flex: 1;
+    }
+
+    .testimonial-details h3 {
+      margin: 0 0 5px;
+      color: #0077cc;
+      font-size: 1.3em;
+    }
+
+    .testimonial-details small {
+      color: #666;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-details p {
+      margin: 0;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .error-message {
+      color: red;
+      text-align: center;
+    }
+
+    .no-data {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+  </style>
+
+  <!-- Place this inside <style> section -->
+<style>
+  .action-buttons {
+    margin-top: 10px;
+  }
+
+  .action-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+
+  .action-buttons button.delete {
+    color: #e74c3c;
+  }
+
+  .action-buttons button.edit {
+    color: #2980b9;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1><i class="fas fa-comment-dots"></i> What Our Customers Say</h1>
+  <div id="testimonial-container">
+    <!-- Testimonials will be loaded here -->
+  </div>
+</div>
+
+<script>
+  const API_URL = 'http://localhost:5000/api/testimonials';
+  const DELETE_URL = 'http://localhost:5000/delete_testimonial/';
+
+  async function fetchTestimonials() {
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) throw new Error('Failed to fetch');
+
+      const data = await response.json();
+      const container = document.getElementById('testimonial-container');
+      container.innerHTML = '';
+
+      if (!data.length) {
+        container.innerHTML = '<p class="no-data">No testimonials available yet.</p>';
+        return;
+      }
+
+      data.forEach(testimonial => {
+        const card = document.createElement('div');
+        card.className = 'testimonial-card';
+
+        const image = document.createElement('img');
+        image.src = testimonial.image_path || 'https://via.placeholder.com/100';
+        image.alt = testimonial.name || 'Customer';
+        image.onerror = function () {
+          this.onerror = null;
+          this.src = 'https://via.placeholder.com/100';
+        };
+
+        const details = document.createElement('div');
+        details.className = 'testimonial-details';
+
+        const name = document.createElement('h3');
+        name.textContent = testimonial.name || 'Anonymous';
+
+        const designation = document.createElement('small');
+        designation.textContent = testimonial.designation || 'No designation';
+
+        const review = document.createElement('p');
+        review.textContent = testimonial.review || 'No review provided.';
+
+        // Action buttons
+        const actions = document.createElement('div');
+        actions.className = 'action-buttons';
+
+        const editBtn = document.createElement('button');
+        editBtn.className = 'edit';
+        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+        editBtn.title = 'Edit testimonial';
+        editBtn.onclick = () => {
+          alert('Edit feature coming soon!');
+        };
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'delete';
+        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteBtn.title = 'Delete testimonial';
+        deleteBtn.onclick = () => deleteTestimonial(testimonial.id, card);
+
+        actions.appendChild(editBtn);
+        actions.appendChild(deleteBtn);
+
+        details.appendChild(name);
+        details.appendChild(designation);
+        details.appendChild(review);
+        details.appendChild(actions);
+
+        card.appendChild(image);
+        card.appendChild(details);
+        container.appendChild(card);
+      });
+    } catch (error) {
+      console.error('Error loading testimonials:', error);
+      document.getElementById('testimonial-container').innerHTML =
+        '<p class="error-message">Failed to load testimonials. Please try again later.</p>';
+    }
+  }
+
+  async function deleteTestimonial(id, cardElement) {
+    if (!confirm('Are you sure you want to delete this testimonial?')) return;
+
+    try {
+      const response = await fetch(`${DELETE_URL}${id}`, {
+        method: 'DELETE'
+      });
+
+      if (!response.ok) throw new Error('Failed to delete testimonial');
+
+      cardElement.remove(); // remove the card from the DOM
+    } catch (error) {
+      console.error('Delete error:', error);
+      alert('Failed to delete testimonial. Please try again.');
+    }
+  }
+
+  window.onload = fetchTestimonials;
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const targetId = this.getAttribute("data-target");
+            const parentCard = this.closest(".product-card");
+
+            // Remove 'active' class from all buttons and tab content within the same card
+            parentCard.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+            parentCard.querySelectorAll(".tab-content").forEach(content => {
+                content.style.opacity = "0"; // Start fade out effect
+                setTimeout(() => {
+                    content.classList.remove("active");
+                }, 300); // Wait for animation to complete before hiding
+            });
+
+            // Add 'active' class to clicked button and corresponding tab content
+            this.classList.add("active");
+
+            setTimeout(() => {
+                const activeContent = parentCard.querySelector(`#${targetId}`);
+                activeContent.classList.add("active");
+                activeContent.style.opacity = "1"; // Smooth fade-in effect
+            }, 300); // Delay to sync with CSS animation
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch all tab buttons
+    const tabButtons = document.querySelectorAll(".tab-btn");
+  
+    // Attach click event listener to each tab button
+    tabButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const targetId = this.getAttribute("data-target"); // Get the target content ID
+        const parentCard = this.closest(".product-card"); // Find the closest product card
+  
+        // Remove the 'active' class from all buttons and tab content within the same card
+        parentCard.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+        parentCard.querySelectorAll(".tab-content").forEach(content => {
+          content.classList.remove("active");
+          content.style.opacity = "0"; // Start fade-out effect
+        });
+  
+        // Add 'active' class to clicked button
+        this.classList.add("active");
+  
+        // Show the corresponding tab content after a short delay
+        setTimeout(() => {
+          const activeContent = parentCard.querySelector(`#${targetId}`);
+          activeContent.classList.add("active");
+          activeContent.style.opacity = "1"; // Smooth fade-in effect
+        }, 300); // Delay to sync with CSS animation
+      });
+    });
+  });
+  

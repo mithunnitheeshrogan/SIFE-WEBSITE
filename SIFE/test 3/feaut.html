@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Featured Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .product-image {
+      flex: 1 1 250px;
+      max-width: 250px;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      flex: 2 1 500px;
+    }
+
+    .product-details h3 {
+      margin-top: 0;
+      color: #0077cc;
+    }
+
+    .product-details ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .product-details ul li {
+      margin-bottom: 6px;
+    }
+
+    .section-label {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #34495e;
+    }
+
+    .error-message {
+      text-align: center;
+      color: red;
+    }
+
+    .no-data {
+      text-align: center;
+      font-style: italic;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1><i class="fas fa-star"></i> Featured Products</h1>
+  <div id="feaut-container">
+    <!-- FEAUT cards will be dynamically inserted here -->
+  </div>
+</div>
+
+<script>
+  const API_URL = 'http://localhost:5000/api/feaut';
+
+  async function fetchFeautData() {
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) throw new Error('Failed to fetch');
+
+      const data = await response.json();
+      const container = document.getElementById('feaut-container');
+
+      if (!data.length) {
+        container.innerHTML = '<p class="no-data">No featured products available yet.</p>';
+        return;
+      }
+
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'product-image';
+        const img = document.createElement('img');
+        img.src = item.image_path || 'https://via.placeholder.com/250';
+        img.alt = item.product_name || 'Product';
+        img.onerror = function () {
+          this.onerror = null;
+          this.src = 'https://via.placeholder.com/250';
+        };
+        imageDiv.appendChild(img);
+
+        const details = document.createElement('div');
+        details.className = 'product-details';
+
+        const title = document.createElement('h3');
+        title.textContent = item.product_name || 'Unnamed Product';
+        details.appendChild(title);
+
+        // Features
+        const featuresLabel = document.createElement('div');
+        featuresLabel.className = 'section-label';
+        featuresLabel.textContent = 'Key Features:';
+        details.appendChild(featuresLabel);
+
+        const featureList = document.createElement('ul');
+        for (let i = 1; i <= 3; i++) {
+          const val = item[`feaut_feature${i}`];
+          if (val) {
+            const li = document.createElement('li');
+            li.textContent = val;
+            featureList.appendChild(li);
+          }
+        }
+        details.appendChild(featureList);
+
+        // Specs
+        const specsLabel = document.createElement('div');
+        specsLabel.className = 'section-label';
+        specsLabel.textContent = 'Specifications:';
+        details.appendChild(specsLabel);
+
+        const specsList = document.createElement('ul');
+        for (let i = 1; i <= 3; i++) {
+          const val = item[`feaut_spec${i}`];
+          if (val) {
+            const li = document.createElement('li');
+            li.textContent = val;
+            specsList.appendChild(li);
+          }
+        }
+        details.appendChild(specsList);
+
+        // Use cases
+        const useLabel = document.createElement('div');
+        useLabel.className = 'section-label';
+        useLabel.textContent = 'Applications:';
+        details.appendChild(useLabel);
+
+        const useList = document.createElement('ul');
+        for (let i = 1; i <= 3; i++) {
+          const val = item[`feaut_use${i}`];
+          if (val) {
+            const li = document.createElement('li');
+            li.textContent = val;
+            useList.appendChild(li);
+          }
+        }
+        details.appendChild(useList);
+
+        card.appendChild(imageDiv);
+        card.appendChild(details);
+
+        container.appendChild(card);
+      });
+
+    } catch (err) {
+      console.error('Error:', err);
+      document.getElementById('feaut-container').innerHTML =
+        '<p class="error-message">Failed to load featured products. Please try again later.</p>';
+    }
+  }
+
+  window.onload = fetchFeautData;
+</script>
+
+</body>
+</html>
